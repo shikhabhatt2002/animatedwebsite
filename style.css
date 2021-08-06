@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    
+}
+nav{
+
+    background-color: rgba(0,0,0,0.2);
+    /* transparent color */
+    height: 15vh;
+    width: 100vw;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items: center; 
+    
+}
+nav .logo{
+    padding-left:30px;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    animation: heartbeat ease 1s infinite normal;
+    animation-fill-mode: forwards;
+
+}
+@keyframes heartbeat{
+    20%{
+        font-size:20px;
+        color:darkorange;
+    }
+    50%{
+        font-size:17px;
+        color:white;
+    }
+    70%{
+        font-size: 12px;
+        color:rgb(6, 110, 15);
+    }
+    
+}
+
+nav .menu{
+    width:40%;
+    display:flex;
+    justify-content: space-around;
+    
+} 
+
+nav .menu a{
+    text-decoration:none;
+    color:white;
+     font-weight: 1000;
+    font-size: large;
+    
+}
+nav .menu a:nth-child(1){
+    /* or first-child */
+    color:#00b894;
+}
+main{
+    width:100%;
+    height:calc(100vh - 15vh);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* text bhi center he rahe*/
+    color:white;
+}
+section h3{
+    font-size:35px;
+    font-weight: 500;
+    letter-spacing:3px ;
+    word-spacing: 5px;
+    text-shadow:2px 2px 2px black;
+    /* 1px horizontally 1 pixels ka diff, 1px for vertically, 2px for blur*/
+
+}
+section h1{
+    font-size:55px;
+    margin:30px 0 20px 0;
+    text-shadow: 3px 3px 2px black;
+    word-spacing: 6px;
+
+}
+section p{
+    font-size:25px;
+    word-spacing:2px;
+    margin-bottom:25px;
+    text-shadow: 1px 1px 1px black;
+
+}
+
+section a{
+    padding:12px 30px;
+    border-radius:4px;
+    /* outline:none; */
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background-color: indianred;
+    transition:all .5s ease;
+}
+section .btn_one{
+    background:white;
+    color:#000;
+}
+section .btn_two{
+    background:#00b894;
+    color:white;
+}
+
+/* url(../images/taj.jpg) */
+header{
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.1)), url("taj.jpg");
+    background-repeat: no-repeat;
+    background-size:1550px 750px;
+}
+.change_content:after{
+    /* jab "do come visit" dikhe uske baad/after ye dikhe.... */
+
+    margin-left:20px;
+    content:'';
+    animation: changetext 10s infinite linear;
+    color:#00b894;
+
+}
+@keyframes changetext{
+    0%{content:"Rishikesh";}
+    20%{content:"Agra";}
+    35%{content:"Dehradun";}
+    60%{content:"Jaipur";}
+    80%{content:"Delhi";}
+    100%{content:"Mumbai";}
+}
+
+.btn_one:hover{
+    color:white;
+    background:#00b894;
+}
+.btn_two:hover{
+    background-color: white;
+    color:#000;
+}
+
+/* @media only screen and (max-width:200px){
+    .logo{
+        font-size: 8px;
+    }
+    .menu{
+        font-size: 3px;
+    }
+    section h1{
+        
+    }
+    header{
+      height:;
+      width:;
+    }
+    
+} */
